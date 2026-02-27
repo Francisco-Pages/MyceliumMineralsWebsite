@@ -2,6 +2,8 @@
 
 > Investor-facing corporate website for Mycelium Minerals, a TSX-listed gold and silver producer operating in Bolivia.
 
+[🇧🇴 Versión en Español](./README_ES.md)
+
 ---
 
 ## Table of Contents
