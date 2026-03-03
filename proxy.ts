@@ -1,11 +1,27 @@
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware(routing);
+const locales = ['en', 'es', 'fr'] as const;
+const defaultLocale = 'en';
+
+export default function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Check if the pathname already has a locale prefix
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) return NextResponse.next();
+
+  // Redirect to the default locale
+  const url = request.nextUrl.clone();
+  url.pathname = `/${defaultLocale}${pathname}`;
+  return NextResponse.redirect(url);
+}
 
 export const config = {
   matcher: [
-    // Enable locale prefix for all routes except api, _next, studio, and static files
+    // Run on all routes except api, _next, studio, and static files
     '/((?!api|_next|studio|.*\\..*).*)',
   ],
 };
