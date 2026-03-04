@@ -7,16 +7,21 @@ export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the pathname already has a locale prefix
-  const pathnameHasLocale = locales.some(
+  const matchedLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return NextResponse.next();
+  if (matchedLocale) {
+    // Forward locale as a header so next-intl server functions can detect it
+    const headers = new Headers(request.headers);
+    headers.set('x-next-intl-locale', matchedLocale);
+    return NextResponse.next({ request: { headers } });
+  }
 
   // Redirect to the default locale
-  const url = request.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname}`;
-  return NextResponse.redirect(url);
+  return NextResponse.redirect(
+    new URL(`/${defaultLocale}${pathname}`, request.url)
+  );
 }
 
 export const config = {
