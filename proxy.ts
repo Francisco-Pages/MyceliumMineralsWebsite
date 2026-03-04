@@ -1,28 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
-const locales = ['en', 'es', 'fr'] as const;
-const defaultLocale = 'en';
-
-export default function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Check if the pathname already has a locale prefix
-  const matchedLocale = locales.find(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  if (matchedLocale) {
-    // Forward locale as a header so next-intl server functions can detect it
-    const headers = new Headers(request.headers);
-    headers.set('x-next-intl-locale', matchedLocale);
-    return NextResponse.next({ request: { headers } });
-  }
-
-  // Redirect to the default locale
-  return NextResponse.redirect(
-    new URL(`/${defaultLocale}${pathname}`, request.url)
-  );
-}
+export default createMiddleware(routing);
 
 export const config = {
   matcher: [
