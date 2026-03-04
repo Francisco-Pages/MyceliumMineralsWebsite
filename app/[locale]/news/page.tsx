@@ -77,7 +77,7 @@ function NewsPageContent() {
           <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
             {t('pressRelease')}
           </p>
-          <h1 className="font-clash font-bold text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+          <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
             {t('title')}
           </h1>
           <p className="mt-4 text-base text-obsidian/70 max-w-2xl leading-relaxed">

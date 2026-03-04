@@ -110,7 +110,7 @@ function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
         </p>
       </FadeInView>
       <FadeInView delay={0.1}>
-        <h1 className="text-6xl md:text-8xl font-clash font-bold text-obsidian max-w-5xl leading-tight">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-clash font-bold text-obsidian max-w-5xl leading-tight">
           {t('heroTitle')}
         </h1>
       </FadeInView>
@@ -158,7 +158,7 @@ function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                   i < metrics.length - 1 ? 'border-r border-white/10' : ''
                 }`}
               >
-                <span className="font-clash font-bold text-6xl md:text-8xl text-gold leading-none tabular-nums">
+                <span className="font-clash font-bold text-4xl sm:text-6xl md:text-8xl text-gold leading-none tabular-nums">
                   {metric.value}
                 </span>
                 <span className="mt-4 text-sm font-mono font-bold uppercase tracking-widest text-white/60">
@@ -190,7 +190,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
             {t('problemEyebrow')}
           </p>
           <div className="mb-6">
-            <span className="font-clash font-bold text-8xl md:text-[9rem] text-obsidian leading-none block">
+            <span className="font-clash font-bold text-5xl sm:text-7xl md:text-[9rem] text-obsidian leading-none block">
               {t('problemStat')}
             </span>
             <p className="mt-3 text-sm text-obsidian/50 max-w-xs leading-relaxed">
@@ -210,7 +210,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
           <p className="text-xs font-mono uppercase tracking-widest text-gold mb-8">
             {t('solutionEyebrow')}
           </p>
-          <h2 className="font-clash font-bold text-4xl md:text-6xl text-white leading-tight mb-6">
+          <h2 className="font-clash font-bold text-3xl sm:text-4xl md:text-6xl text-white leading-tight mb-6">
             {t('solutionTitle')}
           </h2>
           <p className="text-base text-white/60 max-w-md leading-relaxed mb-10">
@@ -249,7 +249,7 @@ function ProjectsGrid({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
             </div>
             <Link
               href="/projects"
-              className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
+              className="hidden sm:inline text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
             >
               {t('projectsViewAll')} →
             </Link>
@@ -298,7 +298,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
             </div>
             <Link
               href="/news"
-              className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
+              className="hidden sm:inline text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
             >
               {t('newsViewAll')} →
             </Link>
@@ -368,7 +368,7 @@ function BoliviaPanel({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
                 i < stats.length - 1 ? 'border-r border-obsidian/20' : ''
               }`}
             >
-              <span className="font-mono font-bold text-4xl md:text-5xl text-obsidian tabular-nums leading-none">
+              <span className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl text-obsidian tabular-nums leading-none">
                 {stat.value}
               </span>
               <span className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/40 leading-relaxed">

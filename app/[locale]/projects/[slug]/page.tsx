@@ -208,7 +208,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
               <Badge key={c} label={c} variant="commodity" />
             ))}
           </div>
-          <h1 className="font-clash font-bold text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+          <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
             {project.name}
           </h1>
           <p className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/50">

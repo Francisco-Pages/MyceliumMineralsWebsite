@@ -156,7 +156,7 @@ function ArticleContent({ slug }: { slug: string }) {
               {article.date}
             </time>
           </div>
-          <h1 className="mt-4 font-clash font-bold text-4xl md:text-6xl text-obsidian max-w-4xl leading-tight">
+          <h1 className="mt-4 font-clash font-bold text-3xl sm:text-4xl md:text-6xl text-obsidian max-w-4xl leading-tight">
             {article.title}
           </h1>
           <p className="mt-4 text-base text-obsidian/70 max-w-2xl leading-relaxed">
