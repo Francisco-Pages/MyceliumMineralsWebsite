@@ -96,30 +96,52 @@ function HomePageContent() {
 
 function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   return (
-    <section className="min-h-[85vh] flex flex-col items-center justify-center px-6 py-24 border-b border-obsidian text-center">
-      <FadeInView>
-        <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
-          {t('irBandTicker')} · Gold &amp; Silver · Bolivia
-        </p>
-      </FadeInView>
-      <FadeInView delay={0.1}>
-        <h1 className="text-4xl sm:text-6xl md:text-8xl font-clash font-bold text-obsidian max-w-5xl leading-tight">
-          {t('heroTitle')}
-        </h1>
-      </FadeInView>
-      <FadeInView delay={0.2}>
-        <p className="mt-6 text-lg text-obsidian/70 max-w-2xl">{t('heroSubtitle')}</p>
-      </FadeInView>
-      <FadeInView delay={0.3}>
-        <div className="mt-10 flex gap-4 flex-wrap justify-center">
-          <ButtonLink href="/projects" variant="primary" size="lg">
-            {t('ctaPrimary')}
-          </ButtonLink>
-          <ButtonLink href="/investor-relations" variant="secondary" size="lg">
-            {t('ctaSecondary')}
-          </ButtonLink>
-        </div>
-      </FadeInView>
+    <section className="min-h-[85vh] relative flex flex-col items-center justify-center px-6 py-24 border-b border-obsidian text-center overflow-hidden bg-obsidian">
+      {/* Background video — place your file at /public/video/hero.mp4 */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/video/hero.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-obsidian/55" />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <FadeInView>
+          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+            {t('irBandTicker')} · Gold &amp; Silver · Bolivia
+          </p>
+        </FadeInView>
+        <FadeInView delay={0.1}>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-clash font-bold text-white max-w-5xl leading-tight">
+            {t('heroTitle')}
+          </h1>
+        </FadeInView>
+        <FadeInView delay={0.2}>
+          <p className="mt-6 text-lg text-white/70 max-w-2xl">{t('heroSubtitle')}</p>
+        </FadeInView>
+        <FadeInView delay={0.3}>
+          <div className="mt-10 flex gap-4 flex-wrap justify-center">
+            <ButtonLink href="/projects" variant="primary" size="lg">
+              {t('ctaPrimary')}
+            </ButtonLink>
+            <ButtonLink
+              href="/investor-relations"
+              variant="secondary"
+              size="lg"
+              className="text-white border-white hover:bg-white hover:text-obsidian"
+            >
+              {t('ctaSecondary')}
+            </ButtonLink>
+          </div>
+        </FadeInView>
+      </div>
     </section>
   );
 }
