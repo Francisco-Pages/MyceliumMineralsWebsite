@@ -1,7 +1,7 @@
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import Link, { type LinkProps } from 'next/link';
 
-type Variant = 'primary' | 'secondary' | 'ghost';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'hero';
 type Size = 'sm' | 'md' | 'lg';
 
 interface ButtonBaseProps {
@@ -26,6 +26,8 @@ const VARIANT_CLASSES: Record<Variant, string> = {
     'bg-transparent text-obsidian border-1.5 border-obsidian hover:bg-obsidian hover:text-white',
   ghost:
     'bg-transparent text-obsidian border-1.5 border-transparent hover:border-obsidian',
+  hero:
+    'bg-white/15 text-white border-1.5 border-white hover:bg-white hover:text-obsidian hover:border-obsidian',
 };
 
 const SIZE_CLASSES: Record<Size, string> = {

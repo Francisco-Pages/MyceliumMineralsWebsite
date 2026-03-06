@@ -4,6 +4,7 @@
     "investorRelations": "Relations Investisseurs",
     "about": "À Propos",
     "sustainability": "Durabilité",
+    "gallery": "Galerie",
     "news": "Actualités & Médias",
     "careers": "Carrières",
     "contact": "Contact"
@@ -72,7 +73,10 @@
     "contactBandTitle": "Parlez à Notre Équipe RI",
     "contactBandSubtitle": "Pour les demandes des actionnaires, les demandes de couverture analytique ou les présentations aux investisseurs.",
     "contactBandEmail": "contact@mycelium-mc.com",
-    "contactBandCta": "Contacter RI"
+    "contactBandCta": "Contacter RI",
+    "galleryTitle": "Opérations sur le Terrain",
+    "gallerySubtitle": "Sur le terrain en Bolivie — forage, échantillonnage et travaux de terrain.",
+    "galleryViewAll": "Voir la Galerie Complète"
   },
   "projects": {
     "title": "Nos Projets",
@@ -270,6 +274,11 @@
     "send": "Envoyer le Message",
     "success": "Votre message a été envoyé. Nous vous contacterons sous peu.",
     "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "gallery": {
+    "eyebrow": "Opérations de Terrain",
+    "title": "Le Travail",
+    "subtitle": "55 photos d'exploration active sur les concessions de Mycelium dans la Province de Ñuflo de Chávez, Bolivie — foreuses, carottes, équipements et l'équipe sur le terrain."
   },
   "footer": {
     "disclaimer": "Ce site contient des déclarations prospectives. Les résultats réels peuvent différer sensiblement de ceux projetés.",

@@ -4,6 +4,7 @@
     "investorRelations": "Relaciones con Inversionistas",
     "about": "Nosotros",
     "sustainability": "Sostenibilidad",
+    "gallery": "Galería",
     "news": "Noticias y Medios",
     "careers": "Empleos",
     "contact": "Contacto"
@@ -72,7 +73,10 @@
     "contactBandTitle": "Hable con Nuestro Equipo de RI",
     "contactBandSubtitle": "Para consultas de accionistas, solicitudes de cobertura analítica o presentaciones para inversionistas.",
     "contactBandEmail": "contact@mycelium-mc.com",
-    "contactBandCta": "Contactar RI"
+    "contactBandCta": "Contactar RI",
+    "galleryTitle": "Operaciones en el Campo",
+    "gallerySubtitle": "En Bolivia — perforación, muestreo y trabajo de campo.",
+    "galleryViewAll": "Ver Galería Completa"
   },
   "projects": {
     "title": "Nuestros Proyectos",
@@ -270,6 +274,11 @@
     "send": "Enviar Mensaje",
     "success": "Su mensaje ha sido enviado. Nos pondremos en contacto pronto.",
     "error": "Algo salió mal. Por favor intente de nuevo."
+  },
+  "gallery": {
+    "eyebrow": "Operaciones de Campo",
+    "title": "El Trabajo",
+    "subtitle": "55 fotos de exploración activa en las concesiones de Mycelium en la Provincia Ñuflo de Chávez, Bolivia — equipos de perforación, muestras de núcleo, maquinaria y el equipo en terreno."
   },
   "footer": {
     "disclaimer": "Este sitio web contiene declaraciones prospectivas. Los resultados reales pueden diferir materialmente de los proyectados.",

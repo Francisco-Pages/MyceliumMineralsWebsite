@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Card from '@/components/ui/Card';
@@ -84,6 +85,7 @@ function HomePageContent() {
       <LatestNews t={t} />
       <BoliviaPanel t={t} />
       <ESGTeaser t={t} />
+      <GalleryTeaser t={t} />
       <IRBand t={t} />
       <ContactCTABand t={t} />
     </div>
@@ -128,15 +130,10 @@ function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
         </FadeInView>
         <FadeInView delay={0.3}>
           <div className="mt-10 flex gap-4 flex-wrap justify-center">
-            <ButtonLink href="/projects" variant="primary" size="lg">
+            <ButtonLink href="/projects" variant="hero" size="lg">
               {t('ctaPrimary')}
             </ButtonLink>
-            <ButtonLink
-              href="/investor-relations"
-              variant="secondary"
-              size="lg"
-              className="text-white border-white hover:bg-white hover:text-obsidian"
-            >
+            <ButtonLink href="/investor-relations" variant="hero" size="lg">
               {t('ctaSecondary')}
             </ButtonLink>
           </div>
@@ -467,7 +464,71 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
 }
 
 // ---------------------------------------------------------------------------
-// 8. IR Band
+// 8. Gallery Teaser — 6-photo preview strip
+// ---------------------------------------------------------------------------
+
+const GALLERY_PREVIEW = [1, 8, 15, 22, 34, 47].map((n) => ({
+  src: `/images/gallery/ops-${String(n).padStart(2, '0')}.jpg`,
+  alt: `Mycelium Minerals field operations — photo ${n}`,
+}));
+
+function GalleryTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
+  return (
+    <section className="bg-offwhite border-b border-obsidian">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <FadeInView>
+          <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
+            <div>
+              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                {t('galleryTitle')}
+              </h2>
+              <p className="mt-2 text-sm text-obsidian/60">{t('gallerySubtitle')}</p>
+            </div>
+            <Link
+              href="/gallery"
+              className="hidden sm:inline text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
+            >
+              {t('galleryViewAll')} →
+            </Link>
+          </div>
+        </FadeInView>
+        <FadeInView delay={0.1}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0 border border-obsidian">
+            {GALLERY_PREVIEW.map((photo, i) => (
+              <Link
+                key={photo.src}
+                href="/gallery"
+                className={`relative aspect-square overflow-hidden group ${i < GALLERY_PREVIEW.length - 1 ? 'border-r border-obsidian/20' : ''}`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 17vw"
+                />
+                <div className="absolute inset-0 bg-obsidian/0 group-hover:bg-obsidian/20 transition-colors" />
+              </Link>
+            ))}
+          </div>
+        </FadeInView>
+        <FadeInView delay={0.15}>
+          <div className="mt-6 flex sm:hidden justify-start">
+            <Link
+              href="/gallery"
+              className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors"
+            >
+              {t('galleryViewAll')} →
+            </Link>
+          </div>
+        </FadeInView>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 9. IR Band
 // ---------------------------------------------------------------------------
 
 function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {

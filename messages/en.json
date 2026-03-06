@@ -4,6 +4,7 @@
     "investorRelations": "Investor Relations",
     "about": "About",
     "sustainability": "Sustainability",
+    "gallery": "Gallery",
     "news": "News & Media",
     "careers": "Careers",
     "contact": "Contact"
@@ -72,7 +73,10 @@
     "contactBandTitle": "Talk to Our IR Team",
     "contactBandSubtitle": "For shareholder inquiries, analyst coverage requests, or investor presentations.",
     "contactBandEmail": "contact@mycelium-mc.com",
-    "contactBandCta": "Contact IR"
+    "contactBandCta": "Contact IR",
+    "galleryTitle": "Operations in the Field",
+    "gallerySubtitle": "On the ground in Bolivia — drilling, sampling, and field work.",
+    "galleryViewAll": "View Full Gallery"
   },
   "projects": {
     "title": "Our Projects",
@@ -270,6 +274,11 @@
     "send": "Send Message",
     "success": "Your message has been sent. We will be in touch shortly.",
     "error": "Something went wrong. Please try again."
+  },
+  "gallery": {
+    "eyebrow": "Field Operations",
+    "title": "The Work",
+    "subtitle": "55 photos from active exploration across Mycelium's concessions in Bolivia's Ñuflo de Chávez Province — drill rigs, core samples, equipment, and the people on the ground."
   },
   "footer": {
     "disclaimer": "This website contains forward-looking statements. Actual results may differ materially from those projected.",
