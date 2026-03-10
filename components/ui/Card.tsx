@@ -38,7 +38,7 @@ export default function Card({
 
       {/* Title */}
       <div>
-        <h3 className="font-clash font-bold text-xl text-obsidian group-hover:text-gold transition-colors leading-tight">
+        <h3 className="font-inter font-bold text-xl text-obsidian group-hover:text-gold transition-colors leading-tight">
           {title}
         </h3>
         {subtitle && <p className="mt-1 text-sm text-obsidian/60">{subtitle}</p>}

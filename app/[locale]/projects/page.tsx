@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
-import Card from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { FadeInView } from '@/components/ui/FadeInView';
 
 export default async function ProjectsPage({
@@ -61,7 +61,7 @@ function ProjectsPageContent() {
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
-            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+            <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
               {t('title')}
             </h1>
           </FadeInView>
@@ -80,17 +80,28 @@ function ProjectsPageContent() {
       <section className="bg-white border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-obsidian">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian rounded-xl overflow-hidden">
               {PROJECTS.map((project) => (
-                <Card
+                <Link
                   key={project.slug}
-                  title={project.title}
-                  stage={project.stage}
-                  commodities={[...project.commodities]}
-                  location={project.location}
                   href={`/projects/${project.slug}`}
-                  className="border-0 border-b border-r border-obsidian/20"
-                />
+                  className="border-b border-r border-obsidian/20 bg-white p-6 flex flex-col gap-4 group hover:bg-offwhite transition-colors"
+                >
+                  <span className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
+                    {project.stage} · {project.location}
+                  </span>
+                  <h3 className="font-inter font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5 flex-1">
+                    {project.commodities.map((c) => (
+                      <Badge key={c} label={c} variant="commodity" />
+                    ))}
+                  </div>
+                  <span className="text-xs font-mono text-obsidian/65 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block">
+                    View project →
+                  </span>
+                </Link>
               ))}
             </div>
           </FadeInView>
@@ -104,7 +115,7 @@ function ProjectsPageContent() {
             <p className="text-xs font-mono uppercase tracking-widest text-obsidian/60 mb-2">
               {t('newConcessionEyebrow')}
             </p>
-            <h3 className="font-clash font-bold text-2xl md:text-3xl text-obsidian leading-tight">
+            <h3 className="font-inter font-bold text-2xl md:text-3xl text-obsidian leading-tight">
               {t('newConcessionTitle')}
             </h3>
             <p className="mt-2 text-sm text-obsidian/70 max-w-2xl leading-relaxed">
@@ -127,7 +138,7 @@ function ProjectsPageContent() {
             <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
               Bolivia
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-white max-w-3xl mx-auto leading-tight">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-white max-w-3xl mx-auto leading-tight">
               {t('mapTeaserTitle')}
             </h2>
             <p className="mt-4 text-base text-white/60 max-w-2xl mx-auto leading-relaxed">

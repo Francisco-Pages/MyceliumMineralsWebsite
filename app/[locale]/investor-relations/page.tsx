@@ -94,7 +94,7 @@ function InvestorRelationsContent() {
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
-            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+            <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
               {t('title')}
             </h1>
           </FadeInView>
@@ -123,27 +123,27 @@ function InvestorRelationsContent() {
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">
                 {t('ticker')}
               </p>
-              <p className="font-clash font-bold text-2xl text-obsidian">MYC</p>
+              <p className="font-inter font-bold text-2xl text-obsidian">MYC</p>
               <p className="text-xs font-mono text-obsidian/60 mt-1">{t('exchange')}: TSX</p>
             </div>
             <div className="py-4 px-6 border-r border-obsidian/20">
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">
                 {t('price')}
               </p>
-              <p className="font-clash font-bold text-2xl text-obsidian">C$—</p>
+              <p className="font-inter font-bold text-2xl text-obsidian">C$—</p>
               <p className="text-xs font-mono text-obsidian/60 mt-1">Real-time data coming soon</p>
             </div>
             <div className="py-4 px-6 border-r border-obsidian/20">
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">
                 {t('marketCap')}
               </p>
-              <p className="font-clash font-bold text-2xl text-obsidian">—</p>
+              <p className="font-inter font-bold text-2xl text-obsidian">—</p>
             </div>
             <div className="py-4 px-6">
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">
                 {t('week52Range')}
               </p>
-              <p className="font-clash font-bold text-2xl text-obsidian">— / —</p>
+              <p className="font-inter font-bold text-2xl text-obsidian">— / —</p>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ function InvestorRelationsContent() {
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
               {t('whyBoliviaEyebrow')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian max-w-2xl leading-tight mb-4">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian max-w-2xl leading-tight mb-4">
               {t('whyBoliviaTitle')}
             </h2>
             <p className="text-base text-obsidian/60 max-w-2xl leading-relaxed mb-12">
@@ -195,7 +195,7 @@ function InvestorRelationsContent() {
                 className="bg-white p-8 border-b border-r border-obsidian/20 flex flex-col gap-3"
               >
                 <span className="font-mono text-xs text-obsidian/55">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="font-clash font-bold text-xl text-obsidian">{t(titleKey)}</h3>
+                <h3 className="font-inter font-bold text-xl text-obsidian">{t(titleKey)}</h3>
                 <p className="text-sm text-obsidian/60 leading-relaxed">{t(descKey)}</p>
               </FadeInView>
             ))}
@@ -210,7 +210,7 @@ function InvestorRelationsContent() {
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
               {t('timelineEyebrow')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian mb-12">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian mb-12">
               {t('timelineTitle')}
             </h2>
           </FadeInView>
@@ -225,7 +225,7 @@ function InvestorRelationsContent() {
                 } ${i < TIMELINE.length - 1 ? 'border-b md:border-b-0 md:border-r border-obsidian/20' : ''}`}
               >
                 <span className="font-mono text-xs text-obsidian/55">{item.step}</span>
-                <h3 className="font-clash font-bold text-xl text-obsidian">{item.phase}</h3>
+                <h3 className="font-inter font-bold text-xl text-obsidian">{item.phase}</h3>
                 <p className="text-xs text-obsidian/60 leading-relaxed flex-1">{item.desc}</p>
                 {item.active && (
                   <span className="mt-2 inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-obsidian">
@@ -246,7 +246,7 @@ function InvestorRelationsContent() {
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-6">
               {t('investmentOpportunityEyebrow')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-6xl text-white max-w-3xl leading-tight mb-4">
+            <h2 className="font-inter font-bold text-4xl md:text-6xl text-white max-w-3xl leading-tight mb-4">
               {t('investmentOpportunityTitle')}
             </h2>
             <p className="text-base text-white/60 max-w-2xl leading-relaxed mb-12">
@@ -260,28 +260,28 @@ function InvestorRelationsContent() {
                 <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-3">
                   {t('investmentEquityLabel')}
                 </p>
-                <p className="font-clash font-bold text-4xl text-white">{t('investmentEquityValue')}</p>
+                <p className="font-inter font-bold text-4xl text-white">{t('investmentEquityValue')}</p>
                 <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentEquityDesc')}</p>
               </div>
               <div className="p-8 border-b md:border-b-0 border-r border-white/20">
                 <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-3">
                   {t('investmentCapitalLabel')}
                 </p>
-                <p className="font-clash font-bold text-4xl text-white">{t('investmentCapitalValue')}</p>
+                <p className="font-inter font-bold text-4xl text-white">{t('investmentCapitalValue')}</p>
                 <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentCapitalDesc')}</p>
               </div>
               <div className="p-8 border-b md:border-b-0 border-r border-white/20">
                 <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-3">
                   {t('investmentDrillLabel')}
                 </p>
-                <p className="font-clash font-bold text-4xl text-white">{t('investmentDrillValue')}</p>
+                <p className="font-inter font-bold text-4xl text-white">{t('investmentDrillValue')}</p>
                 <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentDrillDesc')}</p>
               </div>
               <div className="p-8">
                 <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-3">
                   {t('investmentPortfolioLabel')}
                 </p>
-                <p className="font-clash font-bold text-4xl text-white">{t('investmentPortfolioValue')}</p>
+                <p className="font-inter font-bold text-4xl text-white">{t('investmentPortfolioValue')}</p>
                 <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentPortfolioDesc')}</p>
               </div>
             </div>
@@ -320,7 +320,7 @@ function InvestorRelationsContent() {
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
               {t('investorAlertEyebrow')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian mb-3">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian mb-3">
               {t('investorAlertTitle')}
             </h2>
             <p className="text-base text-obsidian/60 max-w-xl leading-relaxed mb-10">
@@ -338,7 +338,7 @@ function InvestorRelationsContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('documents')}
               </h2>
             </div>
@@ -347,7 +347,7 @@ function InvestorRelationsContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-obsidian">
               {/* Annual Reports */}
               <div id="annual-report" className="border-b border-r border-obsidian/20 bg-white p-8 flex flex-col gap-4">
-                <h3 className="font-clash font-bold text-xl text-obsidian">{t('annualReports')}</h3>
+                <h3 className="font-inter font-bold text-xl text-obsidian">{t('annualReports')}</h3>
                 <p className="text-sm text-obsidian/60">{t('annualReportsDesc')}</p>
                 <ul className="mt-2 flex flex-col gap-2">
                   {['2024 Annual Report', '2023 Annual Report', '2022 Annual Report'].map((doc) => (
@@ -368,7 +368,7 @@ function InvestorRelationsContent() {
 
               {/* Corporate Presentations */}
               <div id="presentation" className="border-b border-obsidian/20 bg-white p-8 flex flex-col gap-4">
-                <h3 className="font-clash font-bold text-xl text-obsidian">{t('presentations')}</h3>
+                <h3 className="font-inter font-bold text-xl text-obsidian">{t('presentations')}</h3>
                 <p className="text-sm text-obsidian/60">{t('presentationsDesc')}</p>
                 <ul className="mt-2 flex flex-col gap-2">
                   {['Corporate Presentation — Q1 2025', 'Corporate Presentation — Q4 2024'].map(
@@ -391,7 +391,7 @@ function InvestorRelationsContent() {
 
               {/* MD&A & Financial Statements */}
               <div className="border-r border-obsidian/20 bg-white p-8 flex flex-col gap-4">
-                <h3 className="font-clash font-bold text-xl text-obsidian">
+                <h3 className="font-inter font-bold text-xl text-obsidian">
                   {t('financialStatements')}
                 </h3>
                 <p className="text-sm text-obsidian/60">{t('financialStatementsDesc')}</p>
@@ -418,7 +418,7 @@ function InvestorRelationsContent() {
 
               {/* Technical Reports */}
               <div className="bg-white p-8 flex flex-col gap-4">
-                <h3 className="font-clash font-bold text-xl text-obsidian">
+                <h3 className="font-inter font-bold text-xl text-obsidian">
                   {t('technicalReports')}
                 </h3>
                 <p className="text-sm text-obsidian/60">{t('technicalReportsDesc')}</p>
@@ -453,7 +453,7 @@ function InvestorRelationsContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('financialHighlights')}
               </h2>
             </div>
@@ -501,7 +501,7 @@ function InvestorRelationsContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('analystCoverage')}
               </h2>
             </div>
@@ -531,7 +531,7 @@ function InvestorRelationsContent() {
           <FadeInView delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <p className="font-clash font-bold text-2xl text-white mb-6">
+                <p className="font-inter font-bold text-2xl text-white mb-6">
                   {t('irContactName')}
                 </p>
                 <div className="flex flex-col gap-3">

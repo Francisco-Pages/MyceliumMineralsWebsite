@@ -53,7 +53,7 @@ function CareersContent() {
       <section className="bg-offwhite border-b border-obsidian py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">Join Us</p>
-          <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+          <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
             {t('title')}
           </h1>
           <p className="mt-4 text-base text-obsidian/70 max-w-2xl leading-relaxed">
@@ -67,7 +67,7 @@ function CareersContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
             <div>
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('openRoles')}
               </h2>
               <p className="mt-2 text-sm text-obsidian/60">{t('openRolesSubtitle')}</p>
@@ -92,7 +92,7 @@ function CareersContent() {
                   className="grid grid-cols-1 md:grid-cols-4 border-b border-obsidian/20 last:border-b-0 px-6 py-5 items-center gap-2 md:gap-0 hover:bg-offwhite transition-colors group"
                 >
                   <div>
-                    <p className="font-clash font-bold text-base text-obsidian group-hover:text-gold transition-colors">
+                    <p className="font-inter font-bold text-base text-obsidian group-hover:text-gold transition-colors">
                       {role.title}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ function CareersContent() {
           ) : (
             /* Empty state */
             <div className="border border-obsidian p-12 text-center">
-              <p className="font-clash font-bold text-xl text-obsidian">{t('noRoles')}</p>
+              <p className="font-inter font-bold text-xl text-obsidian">{t('noRoles')}</p>
               <p className="mt-3 text-sm text-obsidian/60 max-w-md mx-auto">
                 {t('noRolesSubtitle')}
               </p>
@@ -147,19 +147,19 @@ function CareersContent() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
             <div className="border-b md:border-b-0 border-r border-white/10 p-8">
-              <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+              <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                 {t('culture1Title')}
               </h3>
               <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('culture1Desc')}</p>
             </div>
             <div className="border-b md:border-b-0 border-r border-white/10 p-8">
-              <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+              <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                 {t('culture2Title')}
               </h3>
               <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('culture2Desc')}</p>
             </div>
             <div className="p-8">
-              <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+              <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                 {t('culture3Title')}
               </h3>
               <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('culture3Desc')}</p>

@@ -81,7 +81,7 @@ function NewsPageContent() {
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
-            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+            <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
               {t('title')}
             </h1>
           </FadeInView>
@@ -98,7 +98,7 @@ function NewsPageContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('allReleases')}
               </h2>
             </div>
@@ -119,7 +119,7 @@ function NewsPageContent() {
                     {article.date}
                   </time>
                 </div>
-                <h3 className="font-clash font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
+                <h3 className="font-inter font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>

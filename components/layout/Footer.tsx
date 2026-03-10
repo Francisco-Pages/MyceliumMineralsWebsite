@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link
               href={`/${locale}`}
-              className="font-clash font-bold text-xl text-white tracking-tight"
+              className="font-inter font-bold text-xl text-white tracking-tight"
             >
               Mycelium Minerals
             </Link>

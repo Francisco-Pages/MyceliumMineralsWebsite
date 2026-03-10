@@ -234,7 +234,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
               <Badge key={c} label={c} variant="commodity" />
             ))}
           </div>
-          <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+          <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
             {project.name}
           </h1>
           <p className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/50">
@@ -272,7 +272,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
                 key={stat.label}
                 className={`flex flex-col items-center py-6 px-4 ${i < statsRows.length - 1 ? 'border-r border-obsidian/20' : ''}`}
               >
-                <span className="font-clash font-bold text-2xl md:text-3xl text-obsidian text-center leading-tight">
+                <span className="font-inter font-bold text-2xl md:text-3xl text-obsidian text-center leading-tight">
                   {stat.value}
                 </span>
                 <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -290,7 +290,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Description */}
             <div>
-              <h2 className="font-clash font-bold text-3xl text-obsidian mb-6">
+              <h2 className="font-inter font-bold text-3xl text-obsidian mb-6">
                 {t('projectOverview')}
               </h2>
               <div className="flex flex-col gap-4">
@@ -303,7 +303,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
             </div>
             {/* Key Highlights */}
             <div>
-              <h2 className="font-clash font-bold text-3xl text-obsidian mb-6">
+              <h2 className="font-inter font-bold text-3xl text-obsidian mb-6">
                 {t('keyHighlights')}
               </h2>
               <ul className="flex flex-col gap-0 border border-obsidian">
@@ -329,7 +329,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
               {t('drillResultsTitle')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-white mb-12">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-white mb-12">
               {t('drillResultsTitle')}
             </h2>
 
@@ -345,7 +345,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
                   <p className={`text-xs font-mono uppercase tracking-widest ${result.peak ? 'text-obsidian/50' : 'text-white/70'}`}>
                     {result.hole}
                   </p>
-                  <p className={`font-clash font-bold text-4xl md:text-5xl leading-none ${result.peak ? 'text-obsidian' : 'text-white'}`}>
+                  <p className={`font-inter font-bold text-4xl md:text-5xl leading-none ${result.peak ? 'text-obsidian' : 'text-white'}`}>
                     {result.grade}
                   </p>
                   <p className={`text-xs font-mono uppercase tracking-widest ${result.peak ? 'text-obsidian/60' : 'text-white/50'}`}>
@@ -396,7 +396,7 @@ function ProjectDetailContent({ slug }: { slug: string }) {
       <section id="documents" className="bg-offwhite border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-obsidian gap-4">
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
               {t('documents')}
             </h2>
             {project.primaryDocument && (

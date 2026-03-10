@@ -23,7 +23,7 @@ export function InvestorAlertSignup() {
     return (
       <div className="border border-obsidian/20 bg-white p-8 flex flex-col gap-3 items-start">
         <span className="w-2 h-2 bg-gold inline-block" />
-        <p className="font-clash font-bold text-lg text-obsidian">{t('investorAlertSuccess')}</p>
+        <p className="font-inter font-bold text-lg text-obsidian">{t('investorAlertSuccess')}</p>
         <p className="text-xs font-mono text-obsidian/50">{email}</p>
       </div>
     );

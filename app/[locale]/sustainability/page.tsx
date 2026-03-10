@@ -31,7 +31,7 @@ function SustainabilityContent() {
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
-            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+            <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
               {t('title')}
             </h1>
           </FadeInView>
@@ -52,13 +52,13 @@ function SustainabilityContent() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">
               <div className="border-b md:border-b-0 border-r border-obsidian/20 flex flex-col items-center py-12 px-8">
-                <span className="font-clash font-bold text-5xl text-gold">{t('envStat1Value')}</span>
+                <span className="font-inter font-bold text-5xl text-gold">{t('envStat1Value')}</span>
                 <span className="mt-3 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
                   {t('envStat1Label')}
                 </span>
               </div>
               <div className="border-b md:border-b-0 border-r border-obsidian/20 flex flex-col items-center py-12 px-8">
-                <span className="font-clash font-bold text-5xl text-gold">
+                <span className="font-inter font-bold text-5xl text-gold">
                   {t('socialStat1Value')}
                 </span>
                 <span className="mt-3 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -66,7 +66,7 @@ function SustainabilityContent() {
                 </span>
               </div>
               <div className="flex flex-col items-center py-12 px-8">
-                <span className="font-clash font-bold text-5xl text-gold">
+                <span className="font-inter font-bold text-5xl text-gold">
                   {t('socialStat2Value')}
                 </span>
                 <span className="mt-3 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -83,7 +83,7 @@ function SustainabilityContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('environmental')}
               </h2>
             </div>
@@ -95,7 +95,7 @@ function SustainabilityContent() {
             <FadeInView direction="right">
               <div className="grid grid-cols-2 gap-0 border border-obsidian">
                 <div className="border-r border-obsidian/20 flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('envStat1Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -103,7 +103,7 @@ function SustainabilityContent() {
                   </span>
                 </div>
                 <div className="flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('envStat2Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -121,7 +121,7 @@ function SustainabilityContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('social')}
               </h2>
             </div>
@@ -133,7 +133,7 @@ function SustainabilityContent() {
             <FadeInView direction="right">
               <div className="grid grid-cols-2 gap-0 border border-obsidian">
                 <div className="border-r border-obsidian/20 flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('socialStat1Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -141,7 +141,7 @@ function SustainabilityContent() {
                   </span>
                 </div>
                 <div className="flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('socialStat2Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -159,7 +159,7 @@ function SustainabilityContent() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('governance')}
               </h2>
             </div>
@@ -171,7 +171,7 @@ function SustainabilityContent() {
             <FadeInView direction="right">
               <div className="grid grid-cols-2 gap-0 border border-obsidian">
                 <div className="border-r border-obsidian/20 flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('govStat1Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -179,7 +179,7 @@ function SustainabilityContent() {
                   </span>
                 </div>
                 <div className="flex flex-col items-center py-10 px-6">
-                  <span className="font-clash font-bold text-4xl text-gold">
+                  <span className="font-inter font-bold text-4xl text-gold">
                     {t('govStat2Value')}
                   </span>
                   <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50 text-center">
@@ -196,7 +196,7 @@ function SustainabilityContent() {
       <section className="bg-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
           <FadeInView direction="left" className="max-w-xl">
-            <h2 className="font-clash font-bold text-3xl md:text-4xl text-white leading-tight">
+            <h2 className="font-inter font-bold text-3xl md:text-4xl text-white leading-tight">
               {t('reportTitle')}
             </h2>
             <p className="mt-3 text-sm text-white/60 leading-relaxed">{t('reportDesc')}</p>

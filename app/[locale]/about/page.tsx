@@ -76,7 +76,7 @@ function AboutContent() {
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
-            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+            <h1 className="font-inter font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
               {t('title')}
             </h1>
           </FadeInView>
@@ -110,7 +110,7 @@ function AboutContent() {
             <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
               {t('ceoEyebrow')}
             </p>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian leading-tight">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian leading-tight">
               {EXECUTIVES[0].name}
             </h2>
 
@@ -148,7 +148,7 @@ function AboutContent() {
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
               <div>
-                <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                   {t('executiveTeam')}
                 </h2>
                 <p className="mt-2 text-sm text-obsidian/60">{t('executiveTeamSubtitle')}</p>
@@ -165,7 +165,7 @@ function AboutContent() {
                   {/* Photo placeholder */}
                   <div className="w-full aspect-square bg-obsidian/10" />
                   <div>
-                    <p className="font-clash font-bold text-lg text-obsidian leading-tight">
+                    <p className="font-inter font-bold text-lg text-obsidian leading-tight">
                       {person.name}
                     </p>
                     <p className="mt-1 text-xs font-mono uppercase tracking-widest text-gold">
@@ -186,7 +186,7 @@ function AboutContent() {
           <FadeInView>
             <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
               <div>
-                <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                   {t('boardTitle')}
                 </h2>
                 <p className="mt-2 text-sm text-obsidian/60">{t('boardSubtitle')}</p>
@@ -203,7 +203,7 @@ function AboutContent() {
                   {/* Photo placeholder */}
                   <div className="w-full aspect-square bg-obsidian/10" />
                   <div>
-                    <p className="font-clash font-bold text-lg text-obsidian leading-tight">
+                    <p className="font-inter font-bold text-lg text-obsidian leading-tight">
                       {person.name}
                     </p>
                     <p className="mt-1 text-xs font-mono uppercase tracking-widest text-gold">
@@ -229,19 +229,19 @@ function AboutContent() {
           <FadeInView delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
               <div className="border-b md:border-b-0 border-r border-white/10 p-8">
-                <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+                <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                   {t('value1Title')}
                 </h3>
                 <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('value1Desc')}</p>
               </div>
               <div className="border-b md:border-b-0 border-r border-white/10 p-8">
-                <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+                <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                   {t('value2Title')}
                 </h3>
                 <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('value2Desc')}</p>
               </div>
               <div className="p-8">
-                <h3 className="font-clash font-bold text-2xl text-white leading-tight">
+                <h3 className="font-inter font-bold text-2xl text-white leading-tight">
                   {t('value3Title')}
                 </h3>
                 <p className="mt-4 text-sm text-white/60 leading-relaxed">{t('value3Desc')}</p>

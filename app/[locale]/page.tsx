@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
-import Card from '@/components/ui/Card';
 import { ButtonLink } from '@/components/ui/Button';
+import Badge from '@/components/ui/Badge';
 import { FadeInView } from '@/components/ui/FadeInView';
 
 export default async function HomePage({
@@ -121,7 +121,7 @@ function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
           </p>
         </FadeInView>
         <FadeInView delay={0.1}>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-clash font-bold text-white max-w-5xl leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-inter font-bold text-white max-w-5xl leading-tight">
             {t('heroTitle')}
           </h1>
         </FadeInView>
@@ -179,7 +179,7 @@ function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                   .filter(Boolean)
                   .join(' ')}
               >
-                <span className="font-clash font-bold text-6xl sm:text-7xl text-gold leading-none tabular-nums">
+                <span className="font-inter font-bold text-5xl text-gold leading-none tabular-nums whitespace-nowrap">
                   {metric.value}
                 </span>
                 <span className="mt-4 text-sm font-mono font-bold uppercase tracking-widest text-white/60">
@@ -211,7 +211,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
             {t('problemEyebrow')}
           </p>
           <div className="mb-6">
-            <span className="font-clash font-bold text-5xl sm:text-7xl md:text-[9rem] text-obsidian leading-none block">
+            <span className="font-inter font-bold text-5xl sm:text-7xl md:text-[9rem] text-obsidian leading-none block">
               {t('problemStat')}
             </span>
             <p className="mt-3 text-sm text-obsidian/50 max-w-xs leading-relaxed">
@@ -231,7 +231,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
           <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-8">
             {t('solutionEyebrow')}
           </p>
-          <h2 className="font-clash font-bold text-3xl sm:text-4xl md:text-6xl text-white leading-tight mb-6">
+          <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-6xl text-white leading-tight mb-6">
             {t('solutionTitle')}
           </h2>
           <p className="text-base text-white/60 max-w-md leading-relaxed mb-10">
@@ -263,7 +263,7 @@ function ProjectsGrid({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
         <FadeInView>
           <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
             <div>
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('projectsSectionTitle')}
               </h2>
               <p className="mt-2 text-sm text-obsidian/60">{t('projectsSectionSubtitle')}</p>
@@ -277,19 +277,30 @@ function ProjectsGrid({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
           </div>
         </FadeInView>
 
-        {/* 2×2 card grid */}
+        {/* 3-column project cards */}
         <FadeInView delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-obsidian">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian rounded-xl overflow-hidden">
             {PROJECTS.map((project) => (
-              <Card
+              <Link
                 key={project.slug}
-                title={project.title}
-                stage={project.stage}
-                commodities={[...project.commodities]}
-                location={project.location}
                 href={`/projects/${project.slug}`}
-                className="border-0 border-b border-r border-obsidian/20"
-              />
+                className="border-b border-r border-obsidian/20 bg-white p-6 flex flex-col gap-4 group hover:bg-offwhite transition-colors"
+              >
+                <span className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
+                  {project.stage} · {project.location}
+                </span>
+                <h3 className="font-inter font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
+                  {project.title}
+                </h3>
+                <div className="flex flex-wrap gap-1.5 flex-1">
+                  {project.commodities.map((c) => (
+                    <Badge key={c} label={c} variant="commodity" />
+                  ))}
+                </div>
+                <span className="text-xs font-mono text-obsidian/65 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block">
+                  {t('projectsViewAll')} →
+                </span>
+              </Link>
             ))}
           </div>
         </FadeInView>
@@ -312,7 +323,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
         <FadeInView>
           <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
             <div>
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('newsSectionTitle')}
               </h2>
               <p className="mt-2 text-sm text-obsidian/60">{t('newsSectionSubtitle')}</p>
@@ -328,7 +339,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
 
         {/* 3-column news cards */}
         <FadeInView delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian rounded-xl overflow-hidden">
             {NEWS.map((article) => (
               <article
                 key={article.slug}
@@ -337,7 +348,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                 <time className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
                   {article.date}
                 </time>
-                <h3 className="font-clash font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
+                <h3 className="font-inter font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>
@@ -375,12 +386,12 @@ function BoliviaPanel({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
           <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
             {t('boliviaEyebrow')}
           </p>
-          <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian max-w-xl leading-tight mb-14">
+          <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian max-w-xl leading-tight mb-14">
             {t('boliviaTitle')}
           </h2>
         </FadeInView>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-obsidian">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-obsidian rounded-xl overflow-hidden">
           {stats.map((stat, i) => (
             <FadeInView
               key={stat.label}
@@ -421,7 +432,7 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
           <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-6">
             Sustainability &amp; ESG
           </p>
-          <h2 className="font-clash font-bold text-4xl md:text-5xl text-white max-w-3xl leading-tight">
+          <h2 className="font-inter font-bold text-4xl md:text-5xl text-white max-w-3xl leading-tight">
             {t('esgSectionTitle')}
           </h2>
           <p className="mt-6 text-base text-white/60 max-w-2xl leading-relaxed">
@@ -431,7 +442,7 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
 
         {/* Pillar stats */}
         <FadeInView delay={0.15}>
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 rounded-xl overflow-hidden">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
@@ -439,7 +450,7 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                   i < stats.length - 1 ? 'border-b md:border-b-0 md:border-r border-white/10' : ''
                 }`}
               >
-                <span className="font-clash font-bold text-5xl text-gold">{stat.value}</span>
+                <span className="font-inter font-bold text-5xl text-gold">{stat.value}</span>
                 <span className="mt-3 text-xs font-mono uppercase tracking-widest text-white/50">
                   {stat.label}
                 </span>
@@ -479,7 +490,7 @@ function GalleryTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> })
         <FadeInView>
           <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
             <div>
-              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+              <h2 className="font-inter font-bold text-4xl md:text-5xl text-obsidian">
                 {t('galleryTitle')}
               </h2>
               <p className="mt-2 text-sm text-obsidian/60">{t('gallerySubtitle')}</p>
@@ -493,7 +504,7 @@ function GalleryTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> })
           </div>
         </FadeInView>
         <FadeInView delay={0.1}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0 border border-obsidian">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0 border border-obsidian rounded-xl overflow-hidden">
             {GALLERY_PREVIEW.map((photo, i) => (
               <Link
                 key={photo.src}
@@ -537,7 +548,7 @@ function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Stock ticker */}
         <div className="flex items-baseline gap-4">
-          <span className="font-clash font-bold text-3xl text-obsidian">{t('irBandTicker')}</span>
+          <span className="font-inter font-bold text-3xl text-obsidian">{t('irBandTicker')}</span>
           <span className="font-mono text-obsidian/50 text-lg">— C$—</span>
         </div>
 
@@ -545,13 +556,13 @@ function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
         <div className="flex flex-wrap items-center gap-3">
           <Link
             href="/investor-relations#annual-report"
-            className="px-5 py-2.5 border border-obsidian text-obsidian text-sm font-inter font-semibold hover:bg-obsidian hover:text-white transition-colors"
+            className="px-5 py-2.5 border border-obsidian text-obsidian text-sm font-inter font-semibold rounded-lg hover:bg-obsidian hover:text-white transition-colors"
           >
             {t('irBandAnnualReport')}
           </Link>
           <Link
             href="/investor-relations#presentation"
-            className="px-5 py-2.5 border border-obsidian text-obsidian text-sm font-inter font-semibold hover:bg-obsidian hover:text-white transition-colors"
+            className="px-5 py-2.5 border border-obsidian text-obsidian text-sm font-inter font-semibold rounded-lg hover:bg-obsidian hover:text-white transition-colors"
           >
             {t('irBandPresentation')}
           </Link>
@@ -574,7 +585,7 @@ function ContactCTABand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: headline + subtext */}
         <FadeInView direction="left" className="max-w-lg">
-          <h2 className="font-clash font-bold text-3xl md:text-4xl text-obsidian leading-tight">
+          <h2 className="font-inter font-bold text-3xl md:text-4xl text-obsidian leading-tight">
             {t('contactBandTitle')}
           </h2>
           <p className="mt-3 text-sm text-obsidian/60 leading-relaxed">
